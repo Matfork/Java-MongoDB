@@ -1,0 +1,16 @@
+MongoDB: 
+=======
+ - El servidor de mongoDB debe estar corriendo para ejecutar los comandos de export e import, osea se     debe tener el mongod.exe ejecutandose
+ - Se debe de ejecutar los comandos desde el shell de windows, NO el de MongoDB, y tambien
+   debemos de encontrarnos en la ruta mongDB/bin/
+
+
+Exportar: 
+========
+mongodump -d [Nombre_de_la_BD_a_exportar] -o [Ruta_donde_se_guardara_el_back_up]
+mongodump -d mongoDBIntroduccion -o buMongo
+
+Importar:
+========
+mongorestore -d [Nombre_que_tendra_la_BD_a_importar] [ruta_de_donde_esta_el_back_up_a_restaurar]
+mongorestore -d mongoDBIntroduccion /mongDB/Bin/buMongo/mongoDBIntroduccion
